@@ -3,10 +3,7 @@ import ListActions from './actions'
 
 class ListStore {
   constructor() {
-    this.bindListeners({
-      getAllList: ListActions.getAllList
-      });
-
+    console.log('store created');
     this.listData = {
       shoppingList: [
         {name: 'My Shopping List',
@@ -15,6 +12,11 @@ class ListStore {
         quantity: 105}
       ]
     };
+
+    this.bindListeners({
+      getAllList: ListActions.getAllList
+      });
+
   }
 
   getAllList() {

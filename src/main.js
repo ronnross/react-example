@@ -1,12 +1,15 @@
 import React from 'react';
-import ListActions from './stores';
+import ListStore from './stores';
+import ListActions from './actions';
 
 
 
 class ListApp extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {list: ListActions.getAllList()}
+    //this.state = {list: ListStores.getAllList()}
+    console.log(ListStore.getAllList());
+    this.state = {list: 'some conents'};
   }
 
   render() {
@@ -15,6 +18,7 @@ class ListApp extends React.Component {
           <h1> Hello World</h1>
 
           {this.state.list}
+          <p>done</p>
 
           {/*
 
